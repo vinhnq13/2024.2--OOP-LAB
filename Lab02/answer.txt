@@ -1,0 +1,5 @@
+Có! Với cơ chế nạp chồng phương thức (method overloading) trong Java, miễn là danh sách tham số đầu vào khác nhau, bạn có thể định nghĩa nhiều constructor trong cùng một lớp.  
+
+Java luôn truyền tham số theo giá trị (pass-by-value), vì:  
+- Phương thức `swap` chỉ hoán đổi các bản sao cục bộ của tham chiếu (`o1` và `o2`), nhưng điều này không ảnh hưởng đến các tham chiếu gốc (`jungleDVD` và `cinderellaDVD`) trong phương thức `main`.  
+- Sau khi đặt lại tiêu đề, dòng `dvd = new DigitalVideoDisc(oldTitle)` tạo một đối tượng mới và gán nó cho tham chiếu cục bộ `dvd`, nhưng điều này không ảnh hưởng đến tham chiếu gốc (`jungleDVD`) trong phương thức `main`.
