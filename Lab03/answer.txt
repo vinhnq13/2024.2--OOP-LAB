@@ -1,0 +1,21 @@
+1. What are the advantages of Polymorphism?
+Code Reusability: Giúp sử dụng lại code chung thông qua kiểu cha (Media), tiết kiệm thời gian và công sức.
+
+Flexibility: Một đối tượng có thể được xử lý theo nhiều cách khác nhau, tùy vào loại thực sự của nó.
+
+Scalability: Khi mở rộng hệ thống, ta chỉ cần tạo class mới kế thừa mà không cần sửa lại code cũ.
+
+Maintainability: Việc bảo trì hệ thống dễ dàng hơn do cấu trúc rõ ràng và ít ràng buộc giữa các lớp.
+
+2. How is Inheritance useful to achieve Polymorphism in Java?
+Inheritance (kế thừa) tạo ra mối quan hệ cha-con giữa các lớp. Điều này cho phép:
+→ Một biến có kiểu lớp cha (ví dụ: Media) có thể tham chiếu tới đối tượng của bất kỳ lớp con nào (Book, DigitalVideoDisc, CompactDisc...)
+
+Nhờ vậy, ta có thể gọi các phương thức chung (vd: toString(), play(),...) mà thực tế lại thực thi theo logic riêng của từng lớp con → chính là đa hình.
+
+3. What are the differences between Polymorphism and Inheritance in Java?
+Inheritance là cơ chế cho phép một lớp (class) kế thừa thuộc tính và phương thức từ một lớp khác. Đây là cách để tái sử dụng mã nguồn và tổ chức các lớp theo mô hình phân cấp. Một lớp con (subclass) có thể mở rộng hoặc thay đổi hành vi của lớp cha (superclass).
+
+Polymorphism là khả năng một đối tượng có thể có nhiều hình thái khác nhau. Trong Java, điều này thường thể hiện qua việc một biến kiểu lớp cha có thể tham chiếu đến các đối tượng của lớp con, và khi gọi phương thức, phương thức tương ứng với kiểu thực sự của đối tượng sẽ được thực thi (runtime polymorphism).
+
+Nói cách khác, kế thừa là nền tảng để đa hình hoạt động. Trong khi kế thừa mô tả mối quan hệ giữa các lớp, thì đa hình mô tả cách các đối tượng thuộc các lớp khác nhau có thể được xử lý thông qua cùng một interface hoặc lớp cha. Inheritance thiên về cấu trúc, còn Polymorphism thiên về hành vi.
