@@ -1,0 +1,44 @@
+Câu hỏi 1: So sánh container cấp cao giữa AWT và Swing
+Trả lời:
+
+Trong AWT, container cấp cao là Frame, thuộc gói java.awt, là một thành phần heavyweight.
+
+Trong Swing, container cấp cao là JFrame, thuộc gói javax.swing, là một thành phần lightweight và có thêm nhiều tính năng (như hỗ trợ Look and Feel, hỗ trợ Mnemonics, ToolTips,...).
+
+JFrame kế thừa từ java.awt.Frame, nhưng được cải tiến nhiều để phù hợp với các ứng dụng GUI hiện đại hơn.
+
+Câu hỏi 2: So sánh tên lớp của các thành phần giữa AWT và Swing
+Trả lời:
+
+Các lớp trong AWT thường có tên đơn giản, ví dụ:
+
+Label, TextField, Button, Panel, Frame,...
+
+Các lớp tương ứng trong Swing có thêm tiền tố "J", ví dụ:
+
+JLabel, JTextField, JButton, JPanel, JFrame,...
+
+Các thành phần trong Swing thường kế thừa từ lớp tương ứng của AWT nhưng mở rộng thêm tính năng và khả năng tùy biến.
+
+Câu hỏi 3: So sánh cơ chế xử lý sự kiện giữa AWT và Swing
+Trả lời:
+
+Cơ chế xử lý sự kiện giữa AWT và Swing gần như giống nhau vì cả hai đều sử dụng mô hình event delegation model.
+
+Đều sử dụng các listener interfaces như ActionListener, MouseListener,... để xử lý các sự kiện.
+
+Điểm khác biệt:
+
+Trong Swing, vì các thành phần là lightweight nên thường hoạt động mượt mà và chính xác hơn trong việc bắt sự kiện.
+
+Swing hỗ trợ nhiều loại sự kiện và nhiều listener phong phú hơn (ví dụ: ListSelectionListener, ChangeListener...).
+
+Câu hỏi 4 (ngoài yêu cầu nhưng nên có): So sánh giao diện giữa AWT và Swing
+Trả lời:
+
+AWT phụ thuộc vào native UI của hệ điều hành, do đó giao diện có thể khác nhau giữa Windows, macOS, Linux,...
+
+Swing sử dụng Java-rendered UI, nên giao diện nhất quán trên mọi hệ điều hành.
+
+Swing hỗ trợ Look and Feel, cho phép tùy chỉnh giao diện rất linh hoạt.
+
