@@ -1,1 +1,20 @@
+Question:
+The Aims class must be updated to handle any exceptions thrown by the play() methods. What happens if you don’t handle them?
+
+Answer:
+PlayerException is a checked exception, meaning the Java compiler requires any method that calls play() – which may throw this exception – to either catch it or declare it using throws.
+
+There are two valid ways to handle it:
+
+Using a try-catch block: This allows the application to catch the exception at the point where it occurs and respond appropriately (e.g., by showing an error dialog to the user).
+
+Using throws in the method signature: This defers exception handling to a higher-level caller.
+
+If the Aims class does not handle PlayerException in either way, the program will fail to compile. The compiler will raise an error indicating that the exception is unreported and must be caught or declared to be thrown.
+
+In contrast, if PlayerException were an unchecked exception (like those derived from RuntimeException), the compiler would not enforce handling it. However, if such an exception occurs at runtime and is not caught, the program will crash and display a stack trace.
+
+In the context of the AIMS project, where users interact with a GUI, it's essential to handle exceptions properly. This not only ensures the program compiles and runs correctly, but also improves user experience by preventing crashes and providing meaningful error messages — for instance:
+“Cannot play media: length must be greater than zero.”
+
 
