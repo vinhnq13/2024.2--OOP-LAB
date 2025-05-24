@@ -1,0 +1,10 @@
+import java.io.*;
+import java.util.List;
+
+public class DataLoader {
+    public static List<Media> loadMedia(String filePath) throws IOException, ClassNotFoundException {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filePath))) {
+            return (List<Media>) ois.readObject();
+        }
+    }
+}
